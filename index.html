@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<section class="hero">
+  <span class="sticker s1">no IIT, no IIM</span>
+  <h1 class="display wordmark">shugalysis</h1>
+  <p class="tagline">Product lessons from a gaming D2C brand, written by a PM who learned it all on the job.</p>
+  <div class="xp" role="img" aria-label="Product experience: one year">
+    <div class="xp-top"><span>Product XP</span><span>1 year, still grinding</span></div>
+    <div class="bar"><span></span></div>
+  </div>
+  <span class="sticker s2">real numbers, real mistakes</span>
+</section>
+
+<h2 class="display section">Fresh drops</h2>
+{% if site.posts.size > 0 %}
+<div class="drops">
+  {% for post in site.posts %}
+  <a class="drop" href="{{ post.url | relative_url }}">
+    <span class="tag">{{ post.tag }}</span>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.description }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">First post lands soon. Check back next week.</p>
+{% endif %}
+
+<h2 class="display section">Dropping soon</h2>
+<div class="drops soon">
+  <div class="drop">
+    <span class="tag">Monetization</span>
+    <h3>Build for your whales first</h3>
+    <p>Shaping your product around the players who spend the most, without losing everyone else.</p>
+  </div>
+  <div class="drop">
+    <span class="tag">Onboarding</span>
+    <h3>Onboarding, not offroading</h3>
+    <p>Why new players drop off in the first five minutes, and how to keep them on the road.</p>
+  </div>
+  <div class="drop">
+    <span class="tag">Engagement</span>
+    <h3>Boredom is a metric</h3>
+    <p>How to spot the moment players get bored and turn it into your next engagement win.</p>
+  </div>
+</div>
